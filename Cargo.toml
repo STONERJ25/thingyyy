@@ -4,4 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+inputbot = "0.6.0"
+once_cell = "1.21.0"
+pv_recorder = "1.2.4"
 rodio = "0.17"
+vosk = "0.3.1"

@@ -1,0 +1,1 @@
+C:\Users\steve\Documents\vscode\git\command\target\debug\command.exe: C:\Users\steve\Documents\vscode\git\command\build.rs C:\Users\steve\Documents\vscode\git\command\src\main.rs C:\Users\steve\Documents\vscode\git\command\src\vosk.rs

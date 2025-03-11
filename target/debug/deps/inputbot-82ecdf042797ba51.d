@@ -1,0 +1,10 @@
+C:\Users\steve\Documents\vscode\git\command\target\debug\deps\libinputbot-82ecdf042797ba51.rmeta: C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\lib.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\common.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\public.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\windows\mod.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\windows\inputs.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\../README.md
+
+C:\Users\steve\Documents\vscode\git\command\target\debug\deps\inputbot-82ecdf042797ba51.d: C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\lib.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\common.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\public.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\windows\mod.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\windows\inputs.rs C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\../README.md
+
+C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\lib.rs:
+C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\common.rs:
+C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\public.rs:
+C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\windows\mod.rs:
+C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\windows\inputs.rs:
+C:\Users\steve\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\inputbot-0.6.0\src\../README.md:
