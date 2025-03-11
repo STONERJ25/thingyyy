@@ -1,0 +1,6 @@
+{
+  "max_titles": 32,
+  "max_summaries": 10,
+  "max_retrieval": 3,
+  "enable_ii": true
+}

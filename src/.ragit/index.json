@@ -1,0 +1,16 @@
+{
+  "ragit_version": "0.3.3",
+  "chunk_count": 1,
+  "staged_files": [],
+  "processed_files": {
+    "int.txt": {
+      "high": 201597755174048113086913718610888706674,
+      "low": 148929140174337201357720409102994112715
+    }
+  },
+  "curr_processing_file": null,
+  "repo_url": null,
+  "ii_status": {
+    "type": "Outdated"
+  }
+}
