@@ -5,6 +5,7 @@ use std::io::BufReader;
 use std::path::Path;
 use std::thread::sleep;
 use std::time::Duration;
+use std::io;
 
 // Vosk STT Imports
 use pv_recorder::PvRecorderBuilder;
@@ -14,16 +15,20 @@ mod vosk;
 fn text_to_speech(text: &str) {
     println!("Response: {}", text);
     // This uses the command line to call piper and create the wav file named output.wav
-    // let command = format!("echo '{}' | ./piper/piper --model en_US-joe-medium.onnx --output_file output.wav", text);
-    
-    // let output1 = Command::new("sh")
-    //     .arg("-c") // Execute the command as a shell script
-    //     .arg(&command) // Pass the formatted command
-    //     .output()
-    //     .expect("Failed to execute command");
+    let keyword = "----";
+    let cleaned = text.replace("\n", ""); // Remove newlines
+    let trimmed = cleaned.split_once(keyword).map(|(before, _)| before).unwrap_or(&cleaned);
+    let command = format!("echo '{}' | .\\src\\piper\\piper.exe -m .\\src\\piper\\en_GB-cori-medium.onnx  -f test.wav", trimmed);
+    println!("Command: {}\n\n", command);
+    println!("new response: {}", trimmed);
+    Command::new("cmd")
+    .arg("/C") // Execute the command as a shell script
+        .arg(&command) // Pass the formatted command
+        .output()
+        .expect("Failed to execute command");
     // println!("{}", &output1);
     // println!("Command Output:\n{}", String::from_utf8_lossy(&output1.stdout));//reads the response.
-    // play_wav("output.wav");
+    play_wav("test.wav");
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -31,8 +36,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     vosk::init_vosk();
     // Audio Recorder
     let recorder = PvRecorderBuilder::new(512).init()?;
-
-
+    let mut input = String::new();
+    //::stdin().read_line(&mut input)
+      //  .expect("Failed to read line");
+    //println!("{}", input.trim());
+    
     loop {
         // Wait for the space key to be pressed
         while !SpaceKey.is_pressed() {
@@ -48,7 +56,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
 
         let mut transcription = String::new();
-
+ 
         while SpaceKey.is_pressed() {
             let frame = recorder.read().unwrap();
 
@@ -68,15 +76,15 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             recorder.stop().unwrap();
         }
         println!("Final Transcription: {}", transcription);
-        // // For implementation, this should be cut and used after rag develops a response.
-        // let output = Command::new("rag")
-        //     .arg("query")
-        //     .arg(transcription) // Pass the query as an argument
-        //     .output()
-        //     .expect("Failed to execute command");
+        // For implementation, this should be cut and used after rag develops a response.
+        let output = Command::new("rag")
+            .arg("query")
+            .arg(transcription) // Pass the query as an argument
+            .output()
+            .expect("Failed to execute command");
 
-        // let response = String::from_utf8_lossy(&output.stdout); // Convert command output to string
-        // text_to_speech(&response); // Pass the response to text_to_speech function
+        let response = String::from_utf8_lossy(&output.stdout); // Convert command output to string
+        text_to_speech(&response); // Pass the response to text_to_speech function
     }
 }
 

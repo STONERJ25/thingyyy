@@ -1,1 +1,1 @@
-C:\Users\steve\Documents\vscode\git\command\target\debug\command.exe: C:\Users\steve\Documents\vscode\git\command\build.rs C:\Users\steve\Documents\vscode\git\command\src\main.rs C:\Users\steve\Documents\vscode\git\command\src\vosk.rs
+C:\Users\Joshua\ Stoner\Documents\not\ another\ burner\command\target\debug\command.exe: C:\Users\Joshua\ Stoner\Documents\not\ another\ burner\command\build.rs C:\Users\Joshua\ Stoner\Documents\not\ another\ burner\command\src\main.rs C:\Users\Joshua\ Stoner\Documents\not\ another\ burner\command\src\vosk.rs
